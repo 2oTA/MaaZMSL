@@ -64,7 +64,8 @@
         "template": [
             "游戏图标.png"
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 100
     },
     "FindSmallestNumber": {
         "recognition": "Custom",
