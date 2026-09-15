@@ -61,18 +61,18 @@
     "task": [
         {
             "name": "普通任务",
-            "entry": "MyTask1"
+            "entry": "下滑寻找游戏"
         },
         {
             "name": "选项任务",
-            "entry": "MyTask2",
+            "entry": "下滑寻找游戏",
             "option": [
                 "任务选项1"
             ]
         },
         {
             "name": "参数任务",
-            "entry": "MyTask3",
+            "entry": "下滑寻找游戏",
             "option": [
                 "任务选项1"
             ],

@@ -1,20 +1,97 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
+    "NodeA": {
+        "recognition": "OCR",
+        "action": "Click",
+        "next": []
+    },
+    "滑动寻找存储空间": {
+        "action": "Swipe",
+        "begin": [
+            50,
+            500,
+            10,
+            10
+        ],
+        "end": [
+            50,
+            100,
+            10,
+            10
+        ],
+        "next": [
+            "进入存储空间",
+            "滑动寻找存储空间"
+        ],
+        "post_wait_freezes": 100
+    },
+    "进入存储空间": {
+        "recognition": "OCR",
+        "expected": "存储空间",
+        "action": "Click",
+        "next": [
+            "下滑寻找游戏"
+        ]
+    },
+    "下滑寻找游戏": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            500,
+            10,
+            10
+        ],
+        "end": [
+            900,
+            100,
+            10,
+            10
+        ],
+        "next": [
+            "图标进入游戏",
+            "下滑寻找游戏"
+            //"ocr进入游戏"
+        ],
+        "post_wait_freezes": 100
+    },
+    "ocr进入游戏": {
+        "rate_limit": 5000,
+        "recognition": "OCR",
+        "expected": "游戏",
+        "action": "Click"
+    },
+    "图标进入游戏": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "游戏图标.png"
+        ],
+        "action": "Click"
+    },
     "FindSmallestNumber": {
         "recognition": "Custom",
         "custom_recognition": "find_smallest_number",
         "custom_recognition_param": {
             "candidate_rois": [
-                [100, 100, 200, 100],
-                [300, 100, 200, 100]
+                [
+                    100,
+                    100,
+                    200,
+                    100
+                ],
+                [
+                    300,
+                    100,
+                    200,
+                    100
+                ]
             ]
         },
         "action": "Custom",
         "custom_action": "click_target",
         "custom_action_param": {
-            "target": [10, 20]
+            "target": [
+                10,
+                20
+            ]
         }
     },
     "RecognizeNumber": {
